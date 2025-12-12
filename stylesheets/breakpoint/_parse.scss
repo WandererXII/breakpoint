@@ -23,7 +23,7 @@
   $query-fallback: false;
   $return: ();
 
-  $or-list: if(list.separator($query) == 'comma', true, false);
+  $or-list: if(sass(list.separator($query) == comma): true; else: false);
 
   @if ($or-list == false) {
     $query-string: parse($query);
@@ -34,7 +34,7 @@
     $query-string: '';
     @for $i from 1 through $length {
       $query-string: $query-string +
-        if($i == 1, '', ', ') +
+        if(sass($i == 1): ''; else: ', ') +
         parse(list.nth($query, $i));
     }
   }
