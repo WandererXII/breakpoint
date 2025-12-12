@@ -32,7 +32,7 @@
   "homepage": "https://github.com/at-import/breakpoint",
   "devDependencies": {
     "glob": "^11.0",
-    "sass": "^1.83"
+    "sass": "^1.95"
   },
   "volta": {
     "node": "22.12.0"
